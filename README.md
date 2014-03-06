@@ -31,19 +31,34 @@ post /projects/5317dfb3ed339cb42d000003/events
 ```
   {
     name: 'WebInquirySubmitted',
-    properties {
-      
-    }
+      properties {
+        full_name: 'John Smith',
+        company: 'ACME Co.',
+        email: 'john@acme.io'
+      }
   }
 ```
 
 post /projects/5317dfb3ed339cb42d000003/events/bulk
 ```
   {
-    name: 'WebInquirySubmitted',
-    properties {
-      
-    }
+    [
+      {
+        name: 'WebInquirySubmitted',
+        properties {
+          full_name: 'John Smith',
+          company: 'ACME Co.',
+          email: 'john@acme.io'
+        }
+      },
+      {
+        name: 'WebInquirySubmitted',
+        properties {
+          full_name: 'Billy Bob',
+          company: 'Big Bucks',
+          email: 'billy@bob.io'
+        }
+      }
   }
 
   
