@@ -9,7 +9,9 @@ An event is structured rather simply, consisting of 3 key pieces of data.
 3. The data that the event consists of.
   - Data a free form data structure, accepting any valid json for storage of event data.
 
-    curl metrics.teagles.io/v1/events/page_views -H 'Authorization : token <token>' -d '{"page" : "/products/32", "user" : {"id" : "3kj8sg1q9x", "email" : "example@example.com"} }'
+```
+curl metrics.teagles.io/v1/events/page_views -H 'Authorization : token <token>' -d '{"page" : "/products/32", "user" : {"id" : "3kj8sg1q9x", "email" : "example@example.com"} }'
+```
 Creates this event structure
 ```
 {
